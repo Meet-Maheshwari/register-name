@@ -12,6 +12,8 @@ const app = express();
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({extended: true}));
 
+const dburl = process.env.ATLASDB_URL;
+
 main()
 .then(() => {
     console.log("connetion successfull");
@@ -21,7 +23,7 @@ main()
 });
 
  async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/form');
+    await mongoose.connect(dburl);
  };
 
 app.listen(8080, () => {
