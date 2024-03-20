@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration-Form</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+    <form method="POST" action="/form">
+        <h1>Registration Form</h1>
+        <div class="form-outline">
+            <label for="form-control" class="form-label">Name</label><br/>
+            <input type="text" name="name" class="form-control" required>
+        </div>
+        <div class="form-outline">
+            <label for="form-control" class="form-label">Email</label><br/>
+            <input type="email" name="email" class="form-control" required>
+        </div>
+        <div class="form-outline">
+            <label for="form-control" class="form-label">Password</label><br/>
+            <input type="password" name="password" class="form-control" required>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
